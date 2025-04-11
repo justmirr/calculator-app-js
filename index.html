@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ed61603bb2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <button id="microphone"><img src="images/microphone.png" alt=""></button>
+            <button id="history"><img src="images/history.png" alt=""></button>
+        </header>
+        <div class="theme-switch">
+            <button id="toggle-mode">
+                <i class="fa-solid fa-sun light-mode"></i>
+                <i class="fa-solid fa-moon dark-mode"></i>
+            </button>
+        </div>
+        <div class="display-area">
+            <h3></h3>
+            <h1></h1>
+        </div>
+        <hr>
+        <div class="calculator">
+            <button class="buttons first-row" id="erase">C</button>
+            <button class="buttons first-row" id="sign-change" onclick="changeSign()"><img src="images/sign-change.png" alt=""></button>
+            <button class="buttons first-row" id="modulus" onclick="appendInput('%')">%</button>
+            <button class="buttons side-row" id="divide" onclick="appendInput('/')">/</button>
+            <button class="buttons center-panel" onclick="appendInput('7')">7</button>
+            <button class="buttons center-panel" onclick="appendInput('8')">8</button>
+            <button class="buttons center-panel" onclick="appendInput('9')">9</button>
+            <button class="buttons side-row" id="multiply" onclick="appendInput('*')"><img src="images/multiply.png" alt=""></button>
+            <button class="buttons center-panel" onclick="appendInput('4')">4</button>
+            <button class="buttons center-panel" onclick="appendInput('5')">5</button>
+            <button class="buttons center-panel" onclick="appendInput('6')">6</button>
+            <button class="buttons side-row" id="minus" onclick="appendInput('-')"><img src="images/minus.png" alt=""></button>
+            <button class="buttons center-panel" onclick="appendInput('1')">1</button>
+            <button class="buttons center-panel" onclick="appendInput('2')">2</button>
+            <button class="buttons center-panel" onclick="appendInput('3')">3</button>
+            <button class="buttons side-row" id="plus" onclick="appendInput('+')"><img src="images/plus.png" alt=""></button>
+            <button class="buttons center-panel" id="zero" onclick="appendInput('0')">0</button>
+            <button class="buttons center-panel" onclick="appendInput('.')">.</button>
+            <button class="buttons side-row" id="equal" onclick="calculate()"><img src="images/equal.png" alt=""></button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
